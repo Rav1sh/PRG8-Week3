@@ -47,13 +47,13 @@ function modelLoaded() {
 
     // Update the message and start classifying images
     text.innerHTML = "Upload een 20 euro Biljet";
-    classifier = ml5.imageClassifier('model.json', () => {
+    classifier = ml5.imageClassifier('models/model.json', () => {
         console.log('Custom model loaded!');
     });
 }
 
 // load my own model
-classifier = ml5.imageClassifier('model.json', modelLoaded);
+classifier = ml5.imageClassifier('models/model.json', modelLoaded);
 
 function speak(text) {
     if (synth.speaking) {
